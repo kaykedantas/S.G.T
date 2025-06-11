@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendamento</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <div class="logo">LOGO</div>
+    <nav>
+      <ul>
+        <li><a href="#">Página inicial</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Profissionais</a></li>
+        <li><a href="#">Sobre nós</a></li>
+        <li><a href="#">Contato</a></li>
+        <li class="idioma">🇧🇷 PT</li>
+        <li><a href="#" class="login">LOGIN</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Planos -->
+  <section class="planos">
+    <h2>Escolha seu plano:</h2>
+    <div class="plano-cards">
+      <div class="plano">
+        <h3><em>Plano Básico:</em></h3>
+        <p><strong>Profissionais:</strong></p>
+        <ul>
+          <li>Clínico Geral</li>
+          <li>Odontologista</li>
+          <li>Oftalmologista</li>
+          <li>Nutricionista</li>
+        </ul>
+        <p class="preco">R$ 99,99</p>
+      </div>
+      <div class="plano">
+        <h3><em>Plano Vip:</em></h3>
+        <p><strong>Profissionais:</strong></p>
+        <ul>
+          <li>Clínico Geral</li>
+          <li>Odontologista</li>
+          <li>Oftalmologista</li>
+          <li>Nutricionista</li>
+          <li>Nutrólogo</li>
+          <li>Dermatologista</li>
+        </ul>
+        <p class="preco">R$ 149,99</p>
+      </div>
+    </div>
+    <button class="finalizar">Finalizar</button>
+  </section>
+
+  <!-- Calendário e Agendamento -->
+  <section class="agendamento">
+    <div class="calendario">
+      <h3>Janeiro 2025</h3>
+      <!-- Calendário estático para exemplo -->
+      <table>
+        <thead>
+          <tr>
+            <th>Seg</th><th>Ter</th><th>Qua</th><th>Qui</th><th>Sex</th><th>Sab</th><th>Dom</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>29</td><td>30</td><td>31</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+          <tr><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td></tr>
+        </tbody>
+      </table>
+      <button class="enviar">Enviar</button>
+    </div>
+    <div class="form-agenda">
+      <h4>Agendar Consulta</h4>
+      <label for="medico">Escolha um médico:</label>
+      <select id="medico">
+        <option>Selecionar</option>
+      </select>
+      <label for="horario">Escolha um horário:</label>
+      <input type="text" id="horario" placeholder="00:00">
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="footer-col">Endereço: Rua Exemplo, Bloco A - Brasília/DF</div>
+    <div class="footer-col">Trabalhe conosco: <br> website-do-hospital</div>
+    <div class="footer-col">E-mail: atendimento@hospital.com</div>
+    <div class="footer-col">Telefone: (61) 90000-0000</div>
+  </footer>
+
+</body>
+</html>
