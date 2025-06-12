@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Cadastro de Aluno</title>
+  <title>Cadastro de Professor</title>
   <style>
     * {
       box-sizing: border-box;
@@ -88,7 +88,7 @@
       transition: background-color 0.3s;
     }
 
-    .nav-box button:nth-child(1) {
+    .nav-box button:nth-child(4) {
       background-color: #bfcfb6;
     }
 
@@ -157,56 +157,67 @@
 
   <div class="main">
     <div class="nav-box">
-      <button>ALUNO</button>
+      <a href="cadastro_aluno.html"><button>ALUNO</button></a>
       <a href="cadastro_curso.html"><button>CURSO</button></a>
       <a href="cadastro_turma.html"><button>TURMA</button></a>
-      <a href="cadastro_professor.html"><button>PROFESSOR</button></a>
-      <a href="cadastro_colaborador.html"><button>COLABORADOR</button></a>
+      <button>PROFESSOR</button>
+      <button>COLABORADOR</button>
     </div>
 
     <div class="form-container">
       <form action="#" method="post">
         <div class="form-row">
           <div class="form-group">
-            <label>1. NOME DO ALUNO</label>
+            <label>1. NOME PROFESSOR</label>
             <input type="text" name="nome" required>
           </div>
           <div class="form-group">
-            <label>2. TURMA</label>
-            <input type="text" name="turma" required>
+            <label>6. TURNO</label>
+            <select name="turno" required>
+              <option disabled selected>Selecione</option>
+              <option>Matutino</option>
+              <option>Vespertino / Noturno</option>
+            </select>
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
-            <label>3. CPF</label>
+            <label>2. CPF</label>
             <input type="text" name="cpf" placeholder="000.000.000-00" required>
           </div>
           <div class="form-group">
-            <label>4. TELEFONE</label>
+            <label>7. TELEFONE</label>
             <input type="text" name="telefone" placeholder="(61) 00000-0000" required>
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
-            <label>5. EMAIL</label>
-            <input type="email" name="email" required>
+            <label>3. RA</label>
+            <input type="text" name="ra" required>
           </div>
           <div class="form-group">
-            <label>6. CEP</label>
+            <label>8. CEP</label>
             <input type="text" name="cep" placeholder="72222-000" required>
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
-            <label>7. ENDEREÇO</label>
-            <input type="text" name="endereco" placeholder="QNN 06 CONJ P CASA 15" required>
+            <label>4. DATA NASCIMENTO</label>
+            <input type="date" name="nascimento" required>
           </div>
           <div class="form-group">
-            <label>8. DATA NASCIMENTO</label>
-            <input type="date" name="nascimento" required>
+            <label>9. ENDEREÇO</label>
+            <input type="text" name="endereco" placeholder="QNN 06 CONJ P CASA 15" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group" style="flex: 1;">
+            <label>5. EMAIL</label>
+            <input type="email" name="email" required>
           </div>
         </div>
 
