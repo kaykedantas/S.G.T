@@ -8,10 +8,6 @@
     .nav-box button:hover {
       background-color: #c3d8b7;
     }
-    /*BOTAO ESTRAIDO DA PAGINA DE CADASTRO ALUNO*/
-    .nav-box button:nth-child(1) {
-      background-color: #bfcfb6;
-    }
   </style>
 </head>
 <body>
@@ -24,38 +20,38 @@
     <div><img src="../images/logo_presenca.png" alt="Presença"><br>Presença</div>
     <div><a href="tela_perfil.html"><img src="../images/logo_perfil.png" alt="Perfil"><br></a>Perfil</div>
   </div>
-
   <div class="main">
     <div class="nav-box">
       <a href="cadastro_aluno.html"><button>ALUNO</button></a>
       <a href="cadastro_curso.html"><button>CURSO</button></a>
       <a href="cadastro_turma.html"><button>TURMA</button></a>
       <a href="cadastro_professor.html"><button>PROFESSOR</button></a>
+      <a href="cadastro_colaborador.html"><button>COLABORADOR</button></a>
       <button style="background-color: #bfcfb6;">COLABORADOR</button>
     </div>
 
     <div class="form-container">
       <div class="form-columns">
         <div class="form-column">
-          <div class="form-groupp">
-            <label>1. NOME DO COLABORADOR</label>
+          <div class="form-group">
+            <label>1. NOME DO ALUNO</label>
             <input type="text" placeholder="Ex: Maria da Silva">
           </div>
-          <div class="form-groupp">
+          <div class="form-group">
             <label>2. R.A</label>
             <input type="text" placeholder="123456789">
           </div>
-          <div class="form-groupp">
+          <div class="form-group">
             <label>3. CPF</label>
             <input type="text" placeholder="000.000.000-00">
           </div>
         </div>
         <div class="form-column">
-          <div class="form-groupp">
+          <div class="form-group">
             <label>4. DATA DE NASCIMENTO</label>
             <input type="date">
           </div>
-          <div class="form-groupp">
+          <div class="form-group">
             <label>5. TURMA</label>
             <select>
               <option>Turma A</option>
@@ -63,7 +59,7 @@
               <option>Turma C</option>
             </select>
           </div>
-          <div class="form-groupp">
+          <div class="form-group">
             <label>6. SENHA</label>
             <input type="password" placeholder="********">
           </div>
