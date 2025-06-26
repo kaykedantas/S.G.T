@@ -17,6 +17,9 @@
     margin-bottom: 20px;
     font-size: 14px;
   } 
+  .select_inicio {
+    border: 3px solid #cfe5db;
+  }
 
   .sidebar div {
     text-align: center;
