@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Consulta de Turmas</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #2a7a67;
+    }
+    .select_inicio {
+  border: 3px solid #cfe5db;
+}
+    .sidebar {
+      width: 120px;
+      height: 100vh;
+      background-color: #005C52;
+      position: fixed;
+      left: 0;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+      color: white;
+    }
+
+    .sidebar span {
+      font-weight: bold;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .sidebar div {
+      text-align: center;
+      margin: 10px 0;
+      padding: 10px;
+      transition: background-color 0.3s;
+      border-radius: 6px;
+      width: 100%;
+    }
+
+    .sidebar div:hover {
+      background-color: #007b6e;
+      cursor: pointer;
+      border: 3px solid #cfe5db;
+    }
+
+    .sidebar img {
+      width: 24px;
+      height: 24px;
+      display: block;
+      margin: 0 auto 5px;
+    }
+
+    .select_buscar {
+      border: 3px solid #cfe5db;
+    }
+
+    .main {
+      margin-left: 120px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .nav-box {
+      background-color: #d1e6cc;
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .nav-box button {
+      background-color: #e0eecf;
+      border: 1px solid #777;
+      padding: 8px 14px;
+      margin: 0 5px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .nav-box button:nth-child(2) {
+      background-color: #bfcfb6;
+    }
+
+    .filters {
+      background-color: #d1e6cc;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .filters select,
+    .filters input {
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #aaa;
+    }
+
+    .filters button {
+      padding: 8px 16px;
+      background-color: #f08a70;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .turma-list {
+      background-color: #d1ece2;
+      width: 100%;
+      max-width: 1000px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .turma-item {
+      background-color: #fff;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .status {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      margin-left: 10px;
+    }
+
+    .aberto { background-color: green; }
+    .andamento { background-color: yellow; }
+    .encerrado { background-color: red; }
+
+    .detalhes {
+      background-color: white;
+      margin-top: 10px;
+      padding: 15px;
+      border: 1px solid #aaa;
+      border-radius: 6px;
+      display: none;
+    }
+
+    .detalhes h3 {
+      background-color: #2a7a67;
+      color: white;
+      padding: 8px;
+      text-align: center;
+      border-radius: 4px;
+    }
+
+    .detalhes small {
+      display: block;
+      text-align: center;
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    table th, table td {
+      border: 1px solid #aaa;
+      padding: 8px;
+      text-align: center;
+    }
+
+    table th {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <span>MOVA>SE</span>
+    <div ><a href="index.html"><img src="../images/logo_inicio.png"  alt="Início"><br></a>Início</div>
+    <div class="select_inicio"><a href="consulta_aluno.html"><img src="../images/logo_buscar.png" alt="Buscar"><br></a>Buscar</div>
+    <div ><a href="cadastro_aluno.html"><img src="../images/logo_cadastrar.png" alt="Cadastrar"><br></a>Cadastrar</div>
+    <div><img src="../images/logo_presenca.png" alt="Presença"><br>Presença</div>
+    <div><a href="tela_perfil.html"><img src="../images/logo_perfil.png" alt="Perfil"><br></a>Perfil</div>
+  </div>
+
+  <div class="main">
+
+    <div class="nav-box">
+      <a href="consulta_aluno.html"><button>ALUNO</button></a>
+      <a href=""><button>TURMA</button></a>
+      <a href="consulta_professor.html"><button>PROFESSOR</button></a>
+      <a href="consulta_colaborador.html"><button>COLABORADOR</button></a>
+    </div>
+
+    <div class="filters">
+      <select>
+        <option selected disabled>Selecione a Unidade</option>
+        <option>Taguatinga</option>
+        <option>Asa Norte</option>
+        <option>Online</option>
+      </select>
+
+      <select>
+        <option selected disabled>Selecione o Curso</option>
+        <option>Inglês</option>
+        <option>Francês</option>
+        <option>Oratória</option>
+      </select>
+
+      <select>
+        <option selected disabled>Selecione o Período</option>
+        <option>Matutino</option>
+        <option>Vespertino</option>
+        <option>Noturno</option>
+      </select>
+
+      <input type="text" placeholder="Código da Turma" style="width: 130px;">
+      <button>CONSULTAR</button>
+    </div>
+
+    <div class="turma-list">
+      <div class="turma-item" onclick="toggleDetalhes(this)">
+        Oratória – 14:15 às 16:00 – Prof. Junior Oswaldo – Taguatinga – Em Aberto
+        <span class="status aberto"></span>
+      </div>
+      <div class="detalhes">
+        <h3>ORATÓRIA - TAGUATINGA - 14:15 às 16:00</h3>
+        <small>Professor: Junior Oswaldo | Estado: Em Aberto | Monitor: Ana Lima</small>
+        <table>
+          <thead>
+            <tr><th>N°</th><th>Aluno</th><th>Presenças</th><th>Menção</th><th>Situação</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Kayke Andrade</td><td>75%</td><td>9.5</td><td>Passou</td></tr>
+            <tr><td>2</td><td>Caio Nepumuceno</td><td>80%</td><td>4.9</td><td>Reprovado</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="turma-item" onclick="toggleDetalhes(this)">
+        Francês – 10:00 às 11:30 – Prof. Luana Dias – Asa Norte – Em Andamento
+        <span class="status andamento"></span>
+      </div>
+      <div class="detalhes">
+        <h3>FRANCÊS - ASA NORTE - 10:00 às 11:30</h3>
+        <small>Professor: Luana Dias | Estado: Em Andamento | Monitor: João Silva</small>
+        <table>
+          <thead>
+            <tr><th>N°</th><th>Aluno</th><th>Presenças</th><th>Menção</th><th>Situação</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Maria Souza</td><td>90%</td><td>10</td><td>Passou</td></tr>
+            <tr><td>2</td><td>Pedro Oliveira</td><td>65%</td><td>6.5</td><td>Passou</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function toggleDetalhes(turmaDiv) {
+      const detalhes = turmaDiv.nextElementSibling;
+      detalhes.style.display = (detalhes.style.display === "block") ? "none" : "block";
+    }
+  </script>
+
+</body>
+</html>

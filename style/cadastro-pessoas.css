@@ -52,6 +52,9 @@
     .select_cadastrar {
       border: 3px solid #cfe5db;
     }
+    .select_inicio {
+      border: 3px solid #cfe5db;
+    }
     .main {
       margin-left: 120px;
       padding: 40px;

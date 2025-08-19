@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Consulta de Professor</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #2a7a67;
+    }
+    .select_inicio {
+  border: 3px solid #cfe5db;
+}
+
+    .sidebar {
+      width: 120px;
+      height: 100vh;
+      background-color: #005C52;
+      position: fixed;
+      left: 0;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+      color: white;
+    }
+
+    .sidebar span {
+      font-weight: bold;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .sidebar div {
+      text-align: center;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 6px;
+      width: 100%;
+      transition: 0.3s;
+    }
+
+    .sidebar div:hover {
+      background-color: #007b6e;
+      cursor: pointer;
+      border: 3px solid #cfe5db;
+    }
+
+    .sidebar img {
+      width: 24px;
+      height: 24px;
+      display: block;
+      margin: 0 auto 5px;
+    }
+
+    .select_buscar {
+      border: 3px solid #cfe5db;
+    }
+
+    .main {
+      margin-left: 120px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .nav-box {
+      background-color: #d1e6cc;
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .nav-box button {
+      background-color: #e0eecf;
+      border: 1px solid #777;
+      padding: 8px 14px;
+      margin: 0 5px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .nav-box button:nth-child(3) {
+      background-color: #bfcfb6;
+    }
+
+    .search-section {
+      margin-top: 15px;
+    }
+
+    .search-section input {
+      padding: 8px;
+      width: 200px;
+      border-radius: 6px;
+      border: 1px solid #aaa;
+      margin: 5px 0;
+    }
+
+    .search-section button {
+      padding: 8px 16px;
+      background-color: #f08a70;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .info-card, .table-container {
+      background-color: #d1ece2;
+      padding: 10px;
+      border-radius: 12px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+      width: 90%;
+      max-width: 1100px;
+      margin-top: 10px;
+    }
+
+    .info-card {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      border: 1px solid #aaa;
+    }
+
+    .info-block {
+      flex: 1 1 45%;
+    }
+
+    .info-block strong {
+      font-size: 14px;
+    }
+
+    .info-block em {
+      font-style: italic;
+      color: #555;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    table th, table td {
+      border: 1px solid #aaa;
+      padding: 10px;
+      text-align: center;
+    }
+
+    table th {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <span>MOVA>SE</span>
+    <div ><a href="index.html"><img src="../images/logo_inicio.png"  alt="Início"><br></a>Início</div>
+    <div class="select_inicio"><a href="consulta_aluno.html"><img src="../images/logo_buscar.png" alt="Buscar"><br></a>Buscar</div>
+    <div ><a href="cadastro_aluno.html"><img src="../images/logo_cadastrar.png" alt="Cadastrar"><br></a>Cadastrar</div>
+    <div><img src="../images/logo_presenca.png" alt="Presença"><br>Presença</div>
+    <div><a href="tela_perfil.html"><img src="../images/logo_perfil.png" alt="Perfil"><br></a>Perfil</div>
+  </div>
+
+  <div class="main">
+    <div class="nav-box">
+      <a href="consulta_aluno.html"><button>ALUNO</button></a>
+      <a href="consulta_turma.html"><button>TURMA</button></a>
+      <a href=""><button>PROFESSOR</button></a>
+      <a href="consulta_colaborador.html"><button>COLABORADOR</button></a>
+      <div class="search-section">
+        <label>Pesquisar</label><br>
+        <input type="text" placeholder="CPF/R.A">
+        <button>CONSULTAR</button>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <div class="info-block"><strong>NOME:</strong> <em>Nome do Professor</em></div>
+      <div class="info-block"><strong>CPF:</strong> <em>123.456.789-12</em></div>
+      <div class="info-block"><strong>EMAIL:</strong> <em>nome.professor@email.com</em></div>
+      <div class="info-block"><strong>TELEFONE:</strong> <em>(00) 00000-0000</em></div>
+      <div class="info-block"><strong>RA:</strong> <em>2222222</em></div>
+      <div class="info-block"><strong>DATA NASCIMENTO:</strong> <em>dd/mm/aaaa</em></div>
+    </div>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Horário</th>
+            <th>Unidade</th>
+            <th>Cód. Turma</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Oratória</td><td>14:15 às 16:00</td><td>Taguatinga</td><td>79B5C4</td><td>Aberta</td></tr>
+          <tr><td>Oratória</td><td>14:15 às 16:00</td><td>Taguatinga</td><td>79B5C4</td><td>Em andamento</td></tr>
+          <tr><td>Oratória</td><td>14:15 às 16:00</td><td>Taguatinga</td><td>79B5C4</td><td>Encerrada</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</body>
+</html>
