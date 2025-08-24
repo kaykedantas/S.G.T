@@ -1,0 +1,21 @@
+Necessidades foram evidenciadas ao fazermos um levantamento de requisitos com a Rafaela, diretora de cursos do DCE, Gestão Mova-se
+Anotei as principais pra vocês terem ciencia de quais requisitos foram levantados. 
+O rascunho feito de acordo com o relato dela foi anexado a esta mensagem.
+O que o software deve fazer:
+- Precisa permitir o cadastro de um professor. A informações de professor que devem ser armazenadas são: Nome, curso e semestre atual(se for algum parente de um aluno, deve-se colocar o curso superior que o professor realizou, caso ele tenh feito um.), grade horária, contrato assinado por ele, desconto de 15% se for aluno de med(caso seja um parente o aluno com parentesco matriculado receberá o desconto) e de 50% para os demais cursos.
+
+- Os alunos podem se inscrever tanto online quanto de forma presencial através de um contrato físico que deve ser digitalizado assim que for assinado + seu comprovante. Os dados armazenados pelos alunos são nome, R.A, Email, curso, período de estudos(matutino, vespertino ou nortuno). Devemos saber em qual campus o aluno fez a inscrição caso a inscrição tenha sido feita através de contrato físico.
+
+- Um curso só abre a turma caso tenhamos no mínimo 8 alunos. Toda turma tem um professor, um monitor + o alunos. Caso a turma não feche, o aluno tem como opções pedir o reembolso do valor ou pedir transferência para outro curso disponibilizado pelo MOva-se. Esse crédito tem validade por 2 semestres. 
+
+- O professor faz o controle sobre o abono de faltas ou não, caso não haja atestado médico. Para receber o certificado, o aluno deve ter um mínimo de 75% de presença + uma média MM.
+
+- AO final do período letivo, o aluno deve responder um questionário avaliando o curso pra que um email será enviado a ele. Caso o aluno tenha sido aprovado, um certificado será emiido automaticamente e caso ele tenha sido reprovado, o conteúdo do email o informará dessa situação.
+
+- Os cargos que a "pessoas" nessa aplicação poderão assumir serão, monitores, professores, coordenadores e diretores. Um cargo não excluí o outro, ou seja, você pode ser monitor de uma turma, professor de outra e ainda sim ser diretor.
+
+PRINCIPAIS DORES DE CABEÇA DA CLIENTE:
+
+- PROCESSOS DE REEMBOLSO
+- ENVIO DE CERTIFICADO
+- LOCALIZAR CONTRATOS

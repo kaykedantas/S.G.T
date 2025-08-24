@@ -81,6 +81,15 @@
       cursor: pointer;
       transition: background-color 0.3s;
     }
+    .nav-box .botao-selecionado{
+      background-color: #bfcfb6;
+      border: 1px solid #777;
+      padding: 8px 14px;
+      margin: 0 5px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
     .form-container {
       background-color: #cce6dc;
       padding: 40px 60px;
